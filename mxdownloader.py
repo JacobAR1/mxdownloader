@@ -109,7 +109,7 @@ def download_single_chapter(chapter_id):
     config_dir = config.get("settings", "path", fallback="~/Downloads/Manga")
     base_dir = os.path.expanduser(config_dir)
     manga_dir = os.path.join(base_dir, manga_title)
-    chapter_dir = os.path.join(manga_dir, f"Chapter {chapter_no} - {chapter_title}")
+    chapter_dir = os.path.join(manga_dir, f"Chapter {chapter_no}")
     if not os.path.exists(chapter_dir):
         os.makedirs(chapter_dir)
 
@@ -145,9 +145,9 @@ def download_multiple_chapter(chapter_id):
 
 
     config_dir = config.get("settings", "path", fallback="~/Downloads/Manga")
-    base_dir = os.path.expanduser(config_file)
+    base_dir = os.path.expanduser(config_dir)
     manga_dir = os.path.join(base_dir, manga_title)
-    chapter_dir = os.path.join(manga_dir, f"Chapter {chapter_no} - {chapter_title}")
+    chapter_dir = os.path.join(manga_dir, f"Chapter {chapter_no}")
     if not os.path.exists(chapter_dir):
         os.makedirs(chapter_dir)
 
